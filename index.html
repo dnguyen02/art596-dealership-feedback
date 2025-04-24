@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dan's Dealership Feedback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    textarea, select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dan's Dealership Feedback</h1>
+
+  <form action="https://yourformhandler.com" method="POST">
+    <!-- Question 1 -->
+    <label for="arExperience">1. How do you feel about the AR experience at Dan’s dealership?</label>
+    <textarea id="arExperience" name="arExperience" rows="4" placeholder="Type your thoughts here..."></textarea>
+
+    <!-- Question 2 -->
+    <label for="carModel">2. Which car model do you want to buy?</label>
+    <select id="carModel" name="carModel">
+      <option value="isf">IS F</option>
+      <option value="lfa">LFA</option>
+      <option value="rcf">RC F</option>
+    </select>
+
+    <!-- Question 3 -->
+    <label for="paymentMethod">3. Which payment methods would you like to use?</label>
+    <input type="text" id="paymentMethod" name="paymentMethod" placeholder="e.g. Credit card, Bank transfer, Financing">
+
+    <!-- Submit -->
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+</body>
+</html>
