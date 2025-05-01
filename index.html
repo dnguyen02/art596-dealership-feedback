@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+  <title>Dan's Lit Dealership</title>
+  <style>
+    body {
+      font-family: Helvetica, sans-serif, 'Times New Roman', Times, serif, sans-serif;
+      background-color: #ffbe39;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Song Myung', serif;
+  text-align: center;
+  color: black;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 700;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    textarea, select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #fe2970;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff0223;
+    }
+
+    textarea {
+  resize: none;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Dan's Dealership Feedback</h1>
+
+  <form action="thankyou.html" method="GET">
+    <!-- Question 1 -->
+    <label for="arExperience">1. How was your AR experience at Dan's dealership?</label>
+    <textarea id="arExperience" name="arExperience" rows="2" placeholder="Type your thoughts here..."></textarea>
+
+    <!-- Question 2 -->
+    <label for="carModel">2. Which car do you want to buy?</label>
+    <select id="carModel" name="carModel">
+      <option value="isf">LC 500 ($100,000 + tax)</option>
+      <option value="lfa">LFA (will call when available)</option>
+      <option value="rcf">RC F ($95,000 + tax)</option>
+    </select>
+
+    <!-- Question 3 -->
+<label for="paymentMethod">3. Which payment method would you like to use?</label>
+<select id="paymentMethod" name="paymentMethod">
+  <option value="credit">Credit Card</option>
+  <option value="cash">Cash</option>
+  <option value="financing">Financing</option>
+</select>
+
+<!-- Question 4 -->
+<label for="signature">4. Sign Below to Complete</label>
+<input type="text" id="signature" name="signature" placeholder="Type your full name here">
+
+<!-- Submit Button directly below -->
+<button type="submit">Submit and Race</button>
+
+</body>
+</html>
