@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Out Successfully</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <img class="logo zoom-out"  src="images/lexus-logo-transparent-white.png" alt="Lexus Logo">
+  <style>
+    body {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+      background-color: black;
+      text-align: center;
+      padding-top: 250px;
+    }
+    h1 {
+        font-family: 'Prata', serif;
+        font-size: 4rem;
+        letter-spacing: 1px;
+        color: white;
+        animation: fadeIn 2s ease-out forwards;
+    }
+
+    .thankyou-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+    .logo {
+  width: 500px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+  align-items: center;
+    }
+    @keyframes confettiFall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0.6;
+    }
+  }
+
+  @media only screen and (max-width: 300px) {
+  .logo {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+  .confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    z-index: 999;
+    animation: confettiFall 12s linear infinite;
+    opacity: 10;
+  }
+
+  @keyframes zoomOut {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-out {
+  animation: zoomOut 1.5s ease-out;
+}
+
+.page-footer {
+  position: relative;
+  text-align: center;
+  color: #ccc;
+  font-size: 1rem;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.page-footer p {
+  margin: 0;
+  font-family: 'Prata', serif;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+  </style>
+</head>
+<body>
+  <h1>Thank You For Your Visit!</h1>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <script>
+    function createConfettiPiece() {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 60%)`;
+      confetti.style.animationDuration = 2 + Math.random() * 2 + "s";
+      confetti.style.opacity = 1;
+      confetti.style.borderRadius = "50%";
+    
+      document.body.appendChild(confetti);
+    
+      setTimeout(() => {
+        confetti.remove();
+      }, 4000);
+    }
+    
+    // Launch lots of confetti on load
+    for (let i = 0; i < 60; i++) {
+      setTimeout(createConfettiPiece, i * 100);
+    }
+</script>
+</body>
+</html>
